@@ -25,12 +25,12 @@ export default function Alert({ preview }) {
             </>
           ) : (
             <>
-              The source code for this blog is{' '}
+              The source code for this template is available on the Solutions Engineering{' '}
               <a
-                href={`https://github.com/vercel/next.js/tree/canary/examples/${EXAMPLE_PATH}`}
+                href={`https://github.com/Netlify-Moneytronic`}
                 className="underline hover:text-success duration-200 transition-colors"
               >
-                available on GitHub
+                GitHub
               </a>
               .
             </>
