@@ -6,7 +6,8 @@ const contentfulLoader = ({ src, width, quality }) => {
 }
 
 const CompanyImage = (props) => {
-  return <Link href={`/posts/${props.slug}`}>
+
+  return <Link href={`/experience/${props.slug}`}>
     <Image loader={contentfulLoader} {...props} />
   </Link>
 }

@@ -12,7 +12,7 @@ export default function Company({ name, picture, slug }) {
           alt={name}
         />
       </div>
-      <a href={`/posts/${slug}`} className="hover:text-success duration-200 transition-colors text-xl font-bold">{name}</a>
+      <a href={`/experience/${slug}`} className="hover:text-success duration-200 transition-colors text-xl font-bold">{name}</a>
     </div>
   )
 }
