@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Avatar from './avatar'
+import Company from './company'
 import DateComponent from './date'
 
 export default function ExperiencePreview({
@@ -11,6 +11,9 @@ export default function ExperiencePreview({
 }) {
   return (
     <div>
+      <div className="mb-5">
+        {author && <Company name={author.name} picture={author.picture} slug={slug} />}
+      </div>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link href={`/posts/${slug}`} className="hover:underline">
           {title}
@@ -20,7 +23,6 @@ export default function ExperiencePreview({
         <DateComponent dateString={date} />
       </div>
       <p className="text-lg leading-relaxed mb-4">{excerpt} <a href={`/posts/${slug}`} className="underline hover:text-success duration-200 transition-colors">Read More.</a></p>
-      {author && <Avatar name={author.name} picture={author.picture} />}
     </div>
   )
 }

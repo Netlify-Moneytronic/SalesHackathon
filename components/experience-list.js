@@ -7,7 +7,7 @@ export default function ExperienceList({ posts }) {
         {posts.map((post) => (
           <ExperiencePreview
             key={post.slug}
-            title={post.title}
+            title={post.jobtitle}
             coverImage={post.coverImage}
             date={post.date}
             author={post.author}

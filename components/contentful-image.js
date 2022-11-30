@@ -1,11 +1,14 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 const contentfulLoader = ({ src, width, quality }) => {
   return `${src}?w=${width}&q=${quality || 75}`
 }
 
-const ContentfulImage = (props) => {
-  return <Image loader={contentfulLoader} {...props} />
+const CompanyImage = (props) => {
+  return <Link href={`/posts/${props.slug}`}>
+    <Image loader={contentfulLoader} {...props} />
+  </Link>
 }
 
-export default ContentfulImage
+export default CompanyImage
