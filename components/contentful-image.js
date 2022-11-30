@@ -7,9 +7,7 @@ const contentfulLoader = ({ src, width, quality }) => {
 
 const CompanyImage = (props) => {
 
-  return <Link href={`/experience/${props.slug}`}>
-    <Image loader={contentfulLoader} {...props} />
-  </Link>
+  return <Image loader={contentfulLoader} {...props} />
 }
 
 export default CompanyImage

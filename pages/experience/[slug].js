@@ -2,14 +2,14 @@ import { useRouter } from 'next/router'
 import Head from 'next/head'
 import ErrorPage from 'next/error'
 import Container from '../../components/container'
-import PostBody from '../../components/post-body'
+import ExperienceBody from '../../components/experience-body'
 import Header from '../../components/header'
-import PostHeader from '../../components/post-header'
+import ExperienceHeader from '../../components/experience-header'
 import Layout from '../../components/layout'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
-import PostTitle from '../../components/post-title'
+import ExperienceTitle from '../../components/experience-title'
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ post, preview }) {
   const router = useRouter()
 
   if (!router.isFallback && !post) {
@@ -21,7 +21,7 @@ export default function Post({ post, morePosts, preview }) {
       <Container>
         <Header />
         {router.isFallback ? (
-          <PostTitle>Loading…</PostTitle>
+          <ExperienceTitle>Loading…</ExperienceTitle>
         ) : (
           <>
             <article>
@@ -31,13 +31,13 @@ export default function Post({ post, morePosts, preview }) {
                 </title>
                 <meta property="og:image" content={post.coverImage.url} />
               </Head>
-              <PostHeader
+              <ExperienceHeader
                 title={post.jobtitle}
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
               />
-              <PostBody content={post.content} />
+              <ExperienceBody content={post.content} />
             </article>
           </>
         )}
