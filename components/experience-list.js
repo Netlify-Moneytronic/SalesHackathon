@@ -9,7 +9,8 @@ export default function ExperienceList({ experiences }) {
             key={experience.slug}
             title={experience.jobtitle}
             coverImage={experience.coverImage}
-            date={experience.date}
+            endDate={experience.endDate}
+            startDate={experience.date}
             company={experience.company}
             slug={experience.slug}
             excerpt={experience.excerpt}

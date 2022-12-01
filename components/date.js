@@ -1,9 +1,9 @@
 import { format } from 'date-fns'
 
-export default function DateComponent({ dateString }) {
+export default function DateComponent({ startDateString, endDateString }) {
   return (
-    <time dateTime={dateString}>
-      {format(new Date(dateString), 'LLLL, yyyy')} - {format(new Date(dateString), 'MMMM, yyyy')}
+    <time dateTime={startDateString}>
+      {format(new Date(startDateString), 'LLLL, yyyy')} - {endDateString ? format(new Date(endDateString), 'LLLL, yyyy') : 'Present'}
     </time>
   )
 }

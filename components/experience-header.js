@@ -2,7 +2,7 @@ import Company from './company'
 import DateComponent from './date'
 import ExperienceTitle from './experience-title'
 
-export default function ExperienceHeader({ title, date, company }) {
+export default function ExperienceHeader({ title, startDate, endDate, company }) {
   return (
     <>
       <ExperienceTitle>{title}</ExperienceTitle>
@@ -11,7 +11,7 @@ export default function ExperienceHeader({ title, date, company }) {
           {company && <Company name={company.name} picture={company.logo} />}
         </div>
         <div className="mb-6 text-lg">
-          <DateComponent dateString={date} />
+          <DateComponent startDateString={startDate} endDateString={endDate} />
         </div>
       </div>
     </>
