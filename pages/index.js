@@ -7,7 +7,6 @@ import Head from 'next/head'
 import { YOUR_NAME } from '../lib/constants'
 
 export default function Index({ preview, allExperience }) {
-  const moreExperience = allExperience.slice(1)
   return (
     <>
       <Layout preview={preview}>
@@ -16,7 +15,7 @@ export default function Index({ preview, allExperience }) {
         </Head>
         <Container>
           <Intro />
-          {moreExperience.length > 0 && <ExperienceList experiences={moreExperience} />}
+          <ExperienceList experiences={allExperience} />
         </Container>
       </Layout>
     </>

@@ -7,7 +7,7 @@ export default function Company({ name, picture, link }) {
         <CompanyImage
           src={picture.url}
           layout="fill"
-          className="rounded-full"
+          className="full"
           alt={name}
         />
       </div>
