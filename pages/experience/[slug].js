@@ -6,7 +6,7 @@ import ExperienceBody from '../../components/experience-body'
 import Header from '../../components/header'
 import ExperienceHeader from '../../components/experience-header'
 import Layout from '../../components/layout'
-import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
+import { getAllExperiencesWithSlug, getExperienceAndMoreExperiencess } from '../../lib/api'
 import ExperienceTitle from '../../components/experience-title'
 
 export default function Post({ post, preview }) {
@@ -29,13 +29,11 @@ export default function Post({ post, preview }) {
                 <title>
                   {post.jobtitle}
                 </title>
-                <meta property="og:image" content={post.coverImage.url} />
               </Head>
               <ExperienceHeader
                 title={post.jobtitle}
-                coverImage={post.coverImage}
                 date={post.date}
-                author={post.author}
+                company={post.company}
               />
               <ExperienceBody content={post.content} />
             </article>
@@ -47,7 +45,7 @@ export default function Post({ post, preview }) {
 }
 
 export async function getStaticProps({ params, preview = false }) {
-  const data = await getPostAndMorePosts(params.slug, preview)
+  const data = await getExperienceAndMoreExperiencess(params.slug, preview)
 
   return {
     props: {
@@ -59,7 +57,7 @@ export async function getStaticProps({ params, preview = false }) {
 }
 
 export async function getStaticPaths() {
-  const allPosts = await getAllPostsWithSlug()
+  const allPosts = await getAllExperiencesWithSlug()
   return {
     paths: allPosts?.map(({ slug }) => `/experience/${slug}`) ?? [],
     fallback: true,

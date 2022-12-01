@@ -1,18 +1,18 @@
 import ExperiencePreview from './experience-preview'
 
-export default function ExperienceList({ experience }) {
+export default function ExperienceList({ experiences }) {
   return (
     <section>
       <div className="grid grid-cols-1 md:grid-cols-2 md:gap-x-16 lg:gap-x-32 gap-y-20 md:gap-y-32 mb-32">
-        {experience.map((post) => (
+        {experiences.map((experience) => (
           <ExperiencePreview
-            key={post.slug}
-            title={post.jobtitle}
-            coverImage={post.coverImage}
-            date={post.date}
-            author={post.author}
-            slug={post.slug}
-            excerpt={post.excerpt}
+            key={experience.slug}
+            title={experience.jobtitle}
+            coverImage={experience.coverImage}
+            date={experience.date}
+            company={experience.company}
+            slug={experience.slug}
+            excerpt={experience.excerpt}
           />
         ))}
       </div>

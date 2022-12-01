@@ -6,13 +6,13 @@ export default function ExperiencePreview({
   title,
   date,
   excerpt,
-  author,
+  company,
   slug,
 }) {
   return (
     <div>
       <div className="mb-5">
-        {author && <Company name={author.name} picture={author.picture} link={`experience/${slug}`} />}
+        {company && <Company name={company.name} picture={company.picture} link={`experience/${slug}`} />}
       </div>
       <h3 className="text-3xl mb-3 leading-snug">
         <Link href={`experience/${slug}`} className="hover:underline">
@@ -22,7 +22,7 @@ export default function ExperiencePreview({
       <div className="text-lg mb-4">
         <DateComponent dateString={date} />
       </div>
-      <p className="text-lg leading-relaxed mb-4">{excerpt} <a href={`/experience/`} className="underline hover:text-success duration-200 transition-colors">Read More.</a></p>
+      <p className="text-lg leading-relaxed mb-4">{excerpt} <a href={`experience/${slug}`} className="underline hover:text-success duration-200 transition-colors">Read More.</a></p>
     </div>
   )
 }
