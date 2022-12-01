@@ -35,7 +35,7 @@ export default function Post({ post, preview }) {
                 date={post.date}
                 company={post.company}
               />
-              <ExperienceBody content={post.content} />
+              <ExperienceBody description={post.description} />
             </article>
           </>
         )}
