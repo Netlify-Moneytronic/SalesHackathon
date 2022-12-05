@@ -32,7 +32,7 @@ export default function Post({ post, preview }) {
               </Head>
               <ExperienceHeader
                 title={post.jobtitle}
-                startDate={post.date}
+                startDate={post.startDate}
                 endDate={post.endDate}
                 company={post.company}
               />
