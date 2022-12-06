@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "autoprefixer": "10.4.2",
+    "contentful-cli": "^1.16.13",
     "contentful-import": "^7.8.7",
     "postcss": "8.4.5",
     "tailwindcss": "^3.0.15"
