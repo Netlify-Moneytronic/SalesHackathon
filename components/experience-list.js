@@ -7,8 +7,7 @@ export default function ExperienceList({ experiences }) {
         {experiences.map((experience) => (
           <ExperiencePreview
             key={experience.slug}
-            title={experience.jobtitle}
-            coverImage={experience.coverImage}
+            title={experience.jobTitle}
             endDate={experience.endDate}
             startDate={experience.startDate}
             company={experience.company}

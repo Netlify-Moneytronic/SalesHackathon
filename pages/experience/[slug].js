@@ -9,10 +9,10 @@ import Layout from '../../components/layout'
 import { getAllExperiencesWithSlug, getExperienceAndMoreExperiencess } from '../../lib/api'
 import ExperienceTitle from '../../components/experience-title'
 
-export default function Post({ post, preview }) {
+export default function Experience({ experience, preview }) {
   const router = useRouter()
 
-  if (!router.isFallback && !post) {
+  if (!router.isFallback && !experience) {
     return <ErrorPage statusCode={404} />
   }
 
@@ -27,16 +27,16 @@ export default function Post({ post, preview }) {
             <article>
               <Head>
                 <title>
-                  {post.jobtitle}
+                  {experience.jobTitle}
                 </title>
               </Head>
               <ExperienceHeader
-                title={post.jobtitle}
-                startDate={post.startDate}
-                endDate={post.endDate}
-                company={post.company}
+                title={experience.jobTitle}
+                startDate={experience.startDate}
+                endDate={experience.endDate}
+                company={experience.company}
               />
-              <ExperienceBody description={post.description} />
+              <ExperienceBody description={experience.description} />
             </article>
           </>
         )}
@@ -51,16 +51,16 @@ export async function getStaticProps({ params, preview = false }) {
   return {
     props: {
       preview,
-      post: data?.post ?? null,
-      morePosts: data?.morePosts ?? null,
+      experience: data?.experience ?? null,
+      moreExperiences: data?.moreExperiences ?? null,
     },
   }
 }
 
 export async function getStaticPaths() {
-  const allPosts = await getAllExperiencesWithSlug()
+  const allExperiences = await getAllExperiencesWithSlug()
   return {
-    paths: allPosts?.map(({ slug }) => `/experience/${slug}`) ?? [],
+    paths: allExperiences?.map(({ slug }) => `/experience/${slug}`) ?? [],
     fallback: true,
   }
 }
