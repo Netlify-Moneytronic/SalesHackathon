@@ -213,8 +213,6 @@
       ]
     }
   ],
-  "tags": [
-  ],
   "editorInterfaces": [
     {
       "sys": {
@@ -379,7 +377,7 @@
         "id": "5KRiqzc51kxb99c7AfuCgl",
         "type": "Entry",
         "createdAt": "2022-12-06T17:27:17.644Z",
-        "updatedAt": "2022-12-06T18:14:53.322Z",
+        "updatedAt": "2022-12-07T19:50:49.443Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -387,8 +385,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 11,
-        "publishedAt": "2022-12-06T18:14:53.322Z",
+        "publishedVersion": 25,
+        "publishedAt": "2022-12-07T19:50:49.443Z",
         "firstPublishedAt": "2022-12-06T17:34:32.861Z",
         "createdBy": {
           "sys": {
@@ -404,8 +402,8 @@
             "id": "4OPCorEu9DoRgwyuOIix2N"
           }
         },
-        "publishedCounter": 2,
-        "version": 12,
+        "publishedCounter": 6,
+        "version": 26,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -423,13 +421,13 @@
       },
       "fields": {
         "jobTitle": {
-          "en-US": "Senior Solutions Engineering"
+          "en-US": "Account Manager"
         },
         "slug": {
-          "en-US": "senior-solutions-engineer-netlify"
+          "en-US": "account-manager"
         },
         "description": {
-          "en-US": "There are no limits enforced on requests that hit our CDN cache, i.e. the request doesn't count towards your rate limit and you can make an unlimited amount of cache hits. For requests that do hit the GraphQL Content API enforces rate limits of 55 requests per second. Higher rate limits may apply depending on your current plan."
+          "en-US": "As an AM, I crushed it last year, will continue to crush it this year and will definitely crush it next year. "
         },
         "excerpt": {
           "en-US": "Netlify is the platform your developers love for building highly-performant and dynamic web sites, e-commerce stores and applications."
@@ -576,7 +574,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "Profile Pic"
+          "en-US": "Netlify Logo"
         },
         "description": {
           "en-US": "Netlify Logo"
@@ -592,376 +590,6 @@
               }
             },
             "fileName": "logomark.svg",
-            "contentType": "image/svg+xml"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n7ozhspfxyq0"
-          }
-        },
-        "id": "6zDIQdzebOcgbyb2ifH4BE",
-        "type": "Asset",
-        "createdAt": "2022-11-22T23:38:06.610Z",
-        "updatedAt": "2022-11-22T23:38:28.800Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 5,
-        "publishedAt": "2022-11-22T23:38:28.800Z",
-        "firstPublishedAt": "2022-11-22T23:38:28.800Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 6,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Netlify Logo"
-        },
-        "description": {
-          "en-US": "A Logo For Netlify "
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/n7ozhspfxyq0/6zDIQdzebOcgbyb2ifH4BE/2df8f19d32d22a0efd08e07225f54800/logomark.svg",
-            "details": {
-              "size": 4081,
-              "image": {
-                "width": 40,
-                "height": 40
-              }
-            },
-            "fileName": "logomark.svg",
-            "contentType": "image/svg+xml"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n7ozhspfxyq0"
-          }
-        },
-        "id": "1mo2u8GW3ZITYI00s4oLh2",
-        "type": "Asset",
-        "createdAt": "2022-11-30T00:15:40.638Z",
-        "updatedAt": "2022-11-30T00:16:04.371Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 5,
-        "publishedAt": "2022-11-30T00:16:04.371Z",
-        "firstPublishedAt": "2022-11-30T00:16:04.371Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 6,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Test image"
-        },
-        "description": {
-          "en-US": "This is another test image"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/n7ozhspfxyq0/1mo2u8GW3ZITYI00s4oLh2/232026909773216c14c22c62a19d7c15/download.jpg",
-            "details": {
-              "size": 8903,
-              "image": {
-                "width": 259,
-                "height": 194
-              }
-            },
-            "fileName": "download.jpg",
-            "contentType": "image/jpeg"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n7ozhspfxyq0"
-          }
-        },
-        "id": "5IEc9Mb5OPxPrCDIee44X8",
-        "type": "Asset",
-        "createdAt": "2022-12-01T23:06:07.793Z",
-        "updatedAt": "2022-12-01T23:14:02.617Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 12,
-        "publishedAt": "2022-12-01T23:14:02.617Z",
-        "firstPublishedAt": "2022-12-01T23:06:45.731Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "publishedCounter": 2,
-        "version": 13,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Community Logo"
-        },
-        "description": {
-          "en-US": "A Logo for Community.com"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/n7ozhspfxyq0/5IEc9Mb5OPxPrCDIee44X8/daa2b063a05193d38858285f6812fc79/6127ee03d77eea22ed11d4ff_community-logo-black.svg",
-            "details": {
-              "size": 873,
-              "image": {
-                "width": 29,
-                "height": 32
-              }
-            },
-            "fileName": "6127ee03d77eea22ed11d4ff_community-logo-black.svg",
-            "contentType": "image/svg+xml"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n7ozhspfxyq0"
-          }
-        },
-        "id": "1BMxTZQsxho5jCd4RHa3qF",
-        "type": "Asset",
-        "createdAt": "2022-12-01T23:28:50.830Z",
-        "updatedAt": "2022-12-01T23:29:16.551Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 6,
-        "publishedAt": "2022-12-01T23:29:16.551Z",
-        "firstPublishedAt": "2022-12-01T23:29:16.551Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 7,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "SimpleTexting Logo"
-        },
-        "description": {
-          "en-US": "A logo for SimpleTexting.com"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/n7ozhspfxyq0/1BMxTZQsxho5jCd4RHa3qF/0025851725149d8f58388de4236e1a6c/SimpleTexting.76ba79ef.svg",
-            "details": {
-              "size": 1265,
-              "image": {
-                "width": 512,
-                "height": 512
-              }
-            },
-            "fileName": "SimpleTexting.76ba79ef.svg",
-            "contentType": "image/svg+xml"
-          }
-        }
-      }
-    },
-    {
-      "metadata": {
-        "tags": [
-        ]
-      },
-      "sys": {
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n7ozhspfxyq0"
-          }
-        },
-        "id": "2lHiPyD04z3A5qmsKz1Ygv",
-        "type": "Asset",
-        "createdAt": "2022-12-01T23:46:20.195Z",
-        "updatedAt": "2022-12-01T23:46:52.935Z",
-        "environment": {
-          "sys": {
-            "id": "master",
-            "type": "Link",
-            "linkType": "Environment"
-          }
-        },
-        "publishedVersion": 6,
-        "publishedAt": "2022-12-01T23:46:52.935Z",
-        "firstPublishedAt": "2022-12-01T23:46:52.935Z",
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "publishedCounter": 1,
-        "version": 7,
-        "publishedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        }
-      },
-      "fields": {
-        "title": {
-          "en-US": "Beyond The Summit Logo"
-        },
-        "description": {
-          "en-US": "Company Logo for Beyond The Summit"
-        },
-        "file": {
-          "en-US": {
-            "url": "//images.ctfassets.net/n7ozhspfxyq0/2lHiPyD04z3A5qmsKz1Ygv/fec36438ebb6e8a0cbffcd831b26cdbc/beyond_the_summit_logo.62df5ee0.svg",
-            "details": {
-              "size": 62365,
-              "image": {
-                "width": 96,
-                "height": 47
-              }
-            },
-            "fileName": "beyond_the_summit_logo.62df5ee0.svg",
             "contentType": "image/svg+xml"
           }
         }
@@ -1013,63 +641,6 @@
         },
         "updatedAt": "2022-11-22T23:09:56Z"
       }
-    }
-  ],
-  "webhooks": [
-    {
-      "name": "Netlify - Deploy a site",
-      "url": "https://api.netlify.com/build_hooks/63869ea408819434e5c47da9",
-      "httpBasicUsername": null,
-      "topics": [
-        "Entry.publish",
-        "Asset.publish",
-        "Entry.unpublish",
-        "Asset.unpublish"
-      ],
-      "filters": [
-        {
-          "equals": [
-            {
-              "doc": "sys.environment.sys.id"
-            },
-            "master"
-          ]
-        }
-      ],
-      "transformation": {
-        "contentType": "application/json"
-      },
-      "active": true,
-      "sys": {
-        "type": "WebhookDefinition",
-        "id": "6TBx2pr6PdU6C0D8YOyLAX",
-        "version": 0,
-        "space": {
-          "sys": {
-            "type": "Link",
-            "linkType": "Space",
-            "id": "n7ozhspfxyq0"
-          }
-        },
-        "createdBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "createdAt": "2022-11-30T00:07:21Z",
-        "updatedBy": {
-          "sys": {
-            "type": "Link",
-            "linkType": "User",
-            "id": "4OPCorEu9DoRgwyuOIix2N"
-          }
-        },
-        "updatedAt": "2022-11-30T00:07:21Z"
-      },
-      "headers": [
-      ]
     }
   ],
   "roles": [
