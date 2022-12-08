@@ -6,10 +6,10 @@ import ExperienceBody from '../../components/experience-body'
 import Header from '../../components/header'
 import ExperienceHeader from '../../components/experience-header'
 import Layout from '../../components/layout'
-import { getAllExperiencesWithSlug, getExperienceAndMoreExperiencess } from '../../lib/api'
+import { getAllExperiencesWithSlug, getExperience } from '../../lib/api'
 import ExperienceTitle from '../../components/experience-title'
 
-export default function Experience({ experience, preview }) {
+export default function Experience({ experience }) {
   const router = useRouter()
 
   if (!router.isFallback && !experience) {
@@ -46,12 +46,11 @@ export default function Experience({ experience, preview }) {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await getExperienceAndMoreExperiencess(params.slug)
+  const data = await getExperience(params.slug)
 
   return {
     props: {
-      experience: data?.experience ?? null,
-      moreExperiences: data?.moreExperiences ?? null,
+      experience: data?.experience ?? null
     },
   }
 }
