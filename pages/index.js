@@ -14,7 +14,7 @@ export default function Index({ allExperience, profile }) {
           <title>{profile.personal.name}'s Portfolio</title>
         </Head>
         <Container>
-          <Intro />
+          <Intro profile={profile} />
           <ExperienceList experiences={allExperience} />
         </Container>
       </Layout>
