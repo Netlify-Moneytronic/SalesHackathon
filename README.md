@@ -1,6 +1,6 @@
 ## One-click Deploy with Netlify (recommended)
 
-The one-click deploy allows you to connect Netlify to your GitHub account to clone the `SalesHackathon` repository and deploy it automatically. Be sure to go to [Netlify](https://app.netlify.com/signup) and[Contentful](https://www.contentful.com/sign-up/) to sign up for an account before clicking the deploy button.
+The one-click deploy allows you to connect Netlify to your GitHub account to clone the `SalesHackathon` repository and deploy it automatically. Be sure to go to [Netlify](https://app.netlify.com/signup) and [Contentful](https://www.contentful.com/sign-up/) to sign up for an account before clicking the deploy button.
 
 [![Deploy to Netlify button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Netlify-Moneytronic/SalesHackathon)
 
