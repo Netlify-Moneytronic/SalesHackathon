@@ -17,7 +17,7 @@ export default function Experience({ experience, preview }) {
   }
 
   return (
-    <Layout preview={preview}>
+    <Layout>
       <Container>
         <Header />
         {router.isFallback ? (
@@ -45,12 +45,11 @@ export default function Experience({ experience, preview }) {
   )
 }
 
-export async function getStaticProps({ params, preview = false }) {
-  const data = await getExperienceAndMoreExperiencess(params.slug, preview)
+export async function getStaticProps({ params }) {
+  const data = await getExperienceAndMoreExperiencess(params.slug)
 
   return {
     props: {
-      preview,
       experience: data?.experience ?? null,
       moreExperiences: data?.moreExperiences ?? null,
     },
