@@ -4,7 +4,28 @@ const exportFile = require('./export.json')
 const { CONTENTFUL_SPACE_ID, CONTENTFUL_MANAGEMENT_TOKEN, URL } = process.env
 
 module.exports = {
-    onPreBuild: async ({ utils }) => {
+    onPreBuild: async ({ utils, constants }) => {
+
+        console.log('Your contantsa are listied below');
+        console.log(constants);
+
+
+        async function fetchBuildHistory() {
+            return fetch(
+                `https://api.netlify.com/api/v1/sites/${constants.SITE_ID}/builds`,
+                {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${constants.NETLIFY_API_TOKEN}`,
+                    }
+                }
+            ).then((response) => response.json())
+        }
+
+        const response = await fetchBuildHistory();
+        console.log(response);
+
         if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_MANAGEMENT_TOKEN) {
             throw new Error(
                 [
