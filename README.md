@@ -11,9 +11,8 @@ You will need a GitHub account to complete this project.
 ## Setup Contentful
 
 Login or Signup to [Contentful](https://www.contentful.com/sign-up/) 
-You will need a Github account to complete this project. 
+You will need a Contentful account to complete this project. Once you have logged in to Contentful please keep it open and return to the readme for further instructions. 
 - [ ] Contentful account created?
-
 
 ## One-click Deploy with Netlify (recommended)
 
