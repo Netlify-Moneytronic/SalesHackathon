@@ -17,6 +17,8 @@ module.exports = {
             )
         }
 
+        console.log(`Your contentful management token is ${CONTENTFUL_MANAGEMENT_TOKEN}`);
+
         spaceImport({
             spaceId: CONTENTFUL_SPACE_ID,
             managementToken: CONTENTFUL_MANAGEMENT_TOKEN,
