@@ -6,4 +6,4 @@ CONTENTFUL_MANAGEMENT_TOKEN = "CONTENTFUL_MANAGEMENT_TOKEN"
 
 
 [[plugins]]
-package = "/plugins/contenful-setup"
+package = "/plugins/contentful-setup"
