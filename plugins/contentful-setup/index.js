@@ -4,7 +4,11 @@ const exportFile = require('./export.json')
 const { CONTENTFUL_SPACE_ID, CONTENTFUL_MANAGEMENT_TOKEN, URL } = process.env
 
 module.exports = {
-    onPreBuild: async ({ utils }) => {
+    onPreBuild: async ({ utils, constants }) => {
+
+        console.log('Your contantsa are listied below');
+        console.log(constants);
+
         if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_MANAGEMENT_TOKEN) {
             throw new Error(
                 [
