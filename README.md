@@ -1,4 +1,4 @@
-## Netlifu
+## Netlify
 
 Login or Signup to [Netlify](https://app.netlify.com)
 You will need a Netlify account to complete this project. 
