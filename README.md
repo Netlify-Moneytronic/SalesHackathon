@@ -2,17 +2,17 @@
 
 Login or Signup to [Netlify](https://app.netlify.com)
 You will need a Netlify account to complete this project. 
-- [ ] unchecked Netlify account created? 
+- [ ] Netlify account created? 
 ## Github
 
 Login or Signup to [Github](https://github.com/signup?source=login)
 You will need a GitHub account to complete this project. 
-- [ ] unchecked Github account created? 
+- [ ] Github account created? 
 ## Setup Contentful
 
 Login or Signup to [Contentful](https://www.contentful.com/sign-up/) 
 You will need a Github account to complete this project. 
-- [ ] unchecked Contentful account created?
+- [ ] Contentful account created?
 
 
 ## One-click Deploy with Netlify (recommended)
