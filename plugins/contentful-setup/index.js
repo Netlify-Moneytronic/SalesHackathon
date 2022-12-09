@@ -1,7 +1,7 @@
 const spaceImport = require('contentful-import')
 const exportFile = require('./export.json')
 
-const { CONTENTFUL_SPACE_ID, CONTENTFUL_MANAGEMENT_TOKEN, URL } = process.env
+const { CONTENTFUL_SPACE_ID, CONTENTFUL_MANAGEMENT_TOKEN, BUILD_TOKEN } = process.env
 
 module.exports = {
     onPreBuild: async ({ utils, constants }) => {
@@ -17,7 +17,7 @@ module.exports = {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
-                        Authorization: `Bearer ${constants.NETLIFY_API_TOKEN}`,
+                        Authorization: `Bearer ${BUILD_TOKEN}`,
                     }
                 }
             ).then((response) => response.json())
