@@ -1065,7 +1065,7 @@
         "id": "7H7IhXj1VPClB6bqVtKMYR",
         "type": "Asset",
         "createdAt": "2022-12-07T23:54:01.102Z",
-        "updatedAt": "2022-12-07T23:59:37.270Z",
+        "updatedAt": "2022-12-09T19:59:00.836Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1073,8 +1073,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 7,
-        "publishedAt": "2022-12-07T23:54:54.340Z",
+        "publishedVersion": 10,
+        "publishedAt": "2022-12-09T19:59:00.836Z",
         "firstPublishedAt": "2022-12-07T23:54:54.340Z",
         "createdBy": {
           "sys": {
@@ -1090,8 +1090,8 @@
             "id": "4OPCorEu9DoRgwyuOIix2N"
           }
         },
-        "publishedCounter": 1,
-        "version": 10,
+        "publishedCounter": 2,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
