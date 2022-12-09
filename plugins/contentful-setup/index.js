@@ -6,7 +6,7 @@ const { CONTENTFUL_SPACE_ID, CONTENTFUL_MANAGEMENT_TOKEN, URL } = process.env
 module.exports = {
     onPreBuild: async ({ utils, constants }) => {
 
-        console.log('Your contantsa are listied below');
+        console.log('Your contants are listied below');
         console.log(constants);
 
 
