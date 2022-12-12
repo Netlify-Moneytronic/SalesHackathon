@@ -31,7 +31,7 @@ module.exports = {
         }
 
         try {
-            console.log(`Here are your contentful items: ${contentfulItems}`)
+            console.log(`Here are your contentful items: ${getContentfulItems()}`)
             // const items = response.items;
             //         console.log(`We've detected ${items.length} content types in your space - We've skipped adding dummy content`);
             //         if (items.length >= 4) {
