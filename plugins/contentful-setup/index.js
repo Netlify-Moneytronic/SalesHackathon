@@ -12,13 +12,6 @@ module.exports = {
             accessToken: CONTENTFUL_MANAGEMENT_TOKEN
         })
 
-        async function getSpacContent() {
-            return client.getSpace(CONTENTFUL_SPACE_ID)
-                .then((space) => space.getEnvironment(CONTENTFUL_ENVIRONMENT_ID))
-                .then((environment) => environment.getContentTypes())
-                .then((response) => response.json())
-                .catch(console.error)
-        }
 
         if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_MANAGEMENT_TOKEN || !CONTENTFUL_ENVIRONMENT_ID) {
             throw new Error(
@@ -30,21 +23,31 @@ module.exports = {
             )
         }
 
-        const spaceContent = await getSpacContent()
-
-        console.log(spaceContent);
-
-        // try {
-
-        // } catch (error) {
-        //     utils.status.show({
-        //         title: "Contentful Failed to Load",
-        //         summary: "❌ Error: We failed to connect to your contentful instance",
-        //         text: "Please check your credentials and try again later",
-        //     })
-        //     throw new Error(error)
-        // }
-
+        try {
+            client.getSpace(CONTENTFUL_SPACE_ID)
+                .then((space) => space.getEnvironment(CONTENTFUL_ENVIRONMENT_ID))
+                .then((environment) => environment.getContentTypes())
+                .then((response) => {//0
+                    const items = response.items;
+                    console.log(items);
+                    if (items.length === 4) {
+                        utils.status.show({
+                            title: "Initial Import Skipped",
+                            summary: "✅ Content Detected",
+                            text: "We found content in your space and imported the latest version"
+                        }
+                        )
+                            .catch(console.error)
+                    }
+                }).catch(console.error)
+        } catch (error) {
+            utils.status.show({
+                title: "Contentful Failed to Load",
+                summary: "❌ Error: We failed to connect to your contentful instance",
+                text: "Please check your credentials and try again later",
+            })
+            throw new Error(error)
+        }
         // try {
         //     await spaceImport({
         //         spaceId: CONTENTFUL_SPACE_ID,
