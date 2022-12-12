@@ -24,7 +24,10 @@ module.exports = {
                         Authorization: `Bearer ${apiToken}`,
                     }
                 }
-            ).then((response) => console.log(response.json()))
+            ).then((response) => response.json()).then((data) => {
+                console.log(data);
+                return data;
+            })
         }
 
         if (NETLIFY_API_TOKEN && NETLIFY_TEAM_SLUG) {
