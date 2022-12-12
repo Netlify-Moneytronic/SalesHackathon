@@ -12,6 +12,7 @@ module.exports = {
 
         async function deleteEnvironmentVariable(envVar) {
             const url = `https://api.netlify.com/api/v1/accounts/${teamSlug}/env/${envVar}?site_id=${constants.SITE_ID}`;
+            console.log("The URL is: " + url);
             return fetch(
                 url,
                 {
@@ -72,6 +73,7 @@ module.exports = {
                 })
             })
         } else {
+            console.log("No Content to Load");
             utils.status.show({
                 title: "No Content to Load",
                 summary: "✅ Content Detected",
