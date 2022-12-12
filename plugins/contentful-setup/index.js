@@ -3,7 +3,7 @@ const exportFile = require('./export.json')
 // const fetch = require('node-fetch');
 const contentful = require('contentful-management')
 
-const { CONTENTFUL_SPACE_ID, CONTENTFUL_MANAGEMENT_TOKEN, NETLIFY_API_TOKEN, NETLIFY_TEAM_SLUG } = process.env
+const { CONTENTFUL_SPACE_ID, CONTENTFUL_MANAGEMENT_TOKEN } = process.env
 
 
 module.exports = {
