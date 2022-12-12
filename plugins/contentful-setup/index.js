@@ -32,7 +32,7 @@ module.exports = {
 
         try {
             const items = await getContentfulItems();
-            console.log(`Here are your contentful items: ${JSON.stringify(items)}`)
+            console.log(`You currently have ${items.length} content types in your space`);
             // const items = response.items;
             //         console.log(`We've detected ${items.length} content types in your space - We've skipped adding dummy content`);
             //         if (items.length >= 4) {
