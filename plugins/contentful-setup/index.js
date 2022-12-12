@@ -11,18 +11,20 @@ module.exports = {
         const teamSlug = NETLIFY_TEAM_SLUG;
 
         async function deleteEnvironmentVariable(envVar) {
-            const url = `https://api.netlify.com/api/v1/accounts/${teamSlug}/env/${envVar}?site_id=${constants.SITE_ID}`;
+            // const url = `https://api.netlify.com/api/v1/accounts/${teamSlug}/env/${envVar}?site_id=${constants.SITE_ID}`;
+            const url = `https://api.netlify.com/api/v1/accounts/${teamSlug}/env?site_id=${constants.SITE_ID}`;
             console.log("The URL is: " + url);
             return fetch(
                 url,
                 {
-                    method: 'DELETE',
+                    // method: 'DELETE',
+                    method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
                         Authorization: `Bearer ${apiToken}`,
                     }
                 }
-            )
+            ).then((response) => console.log(response.json()))
         }
 
         if (NETLIFY_API_TOKEN && NETLIFY_TEAM_SLUG) {
