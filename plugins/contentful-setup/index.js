@@ -8,8 +8,10 @@ module.exports = {
     onPreBuild: async ({ utils, constants }) => {
 
         async function deleteEnvironmentVariable(envVar) {
+            const url = `https://api.netlify.com/api/v1/accounts/${NETLIFY_TEAM_SLUG}/env/${envVar}?site_id=${constants.SITE_ID}`
+            console.log(url);
             return fetch(
-                `https://api.netlify.com/api/v1/accounts/${NETLIFY_TEAM_SLUG}/env/${envVar}?site_id=${constants.SITE_ID}`,
+                url,
                 {
                     method: 'DELETE',
                     headers: {
@@ -17,7 +19,10 @@ module.exports = {
                         Authorization: `Bearer ${NETLIFY_API_TOKEN}`,
                     }
                 }
-            )
+            ).then((response) => {
+                console.log(response);
+                return response;
+            })
         }
 
         if (NETLIFY_API_TOKEN && NETLIFY_TEAM_SLUG) {
