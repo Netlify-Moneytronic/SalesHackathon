@@ -28,19 +28,17 @@ module.exports = {
                 .then((space) => space.getEnvironment(CONTENTFUL_ENVIRONMENT_ID))
                 .then((environment) => environment.getContentTypes())
                 .then((response) => {
-                    console.log(response);
                     const items = response.items;
                     console.log(items);
                     if (items.length === 4) {
                         utils.status.show({
                             title: "Initial Import Skipped",
                             summary: "✅ Content Detected",
-                            text: "We found content in your space and imported the latest version"
+                            text: "We found content in your space, so we skipped adding dummy content",
                         }
                         )
-                            .catch(console.error)
                     }
-                }).catch(console.error)
+                }).catch(new Error("Failed to load content"))
         } catch (error) {
             utils.status.show({
                 title: "Contentful Failed to Load",
