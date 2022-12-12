@@ -24,7 +24,7 @@ module.exports = {
         }
 
         try {
-            client.getSpace(CONTENTFUL_SPACE_ID)
+            await client.getSpace(CONTENTFUL_SPACE_ID)
                 .then((space) => space.getEnvironment(CONTENTFUL_ENVIRONMENT_ID))
                 .then((environment) => environment.getContentTypes())
                 .then((response) => {
