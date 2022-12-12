@@ -47,22 +47,6 @@ module.exports = {
                     summary: "✅ Success: We've Loaded in your Pre-Built Content",
                     text: "You're all set!",
                 })
-                await deleteEnvironmentVariable("NETLIFY_API_TOKEN").catch((error) => {
-                    console.log(error);
-                    utils.status.show({
-                        title: "Failed to Delete Netlify API Token",
-                        summary: "❌ Error: We've Failed to Delete your NETLIFY_API_TOKEN environment variable",
-                        text: "See console for error",
-                    })
-                })
-                await deleteEnvironmentVariable("NETLIFY_TEAM_SLUG").catch((error) => {
-                    console.log(error);
-                    utils.status.show({
-                        title: "Failed to Delete NETLIFY_TEAM_SLUG",
-                        summary: "❌ Error: We've Failed to Delete your NETLIFY_TEAM_SLUG environment variable",
-                        text: "See console for error",
-                    })
-                })
             } catch (error) {
                 utils.status.show({
                     title: "Content Load Failed",
@@ -71,6 +55,22 @@ module.exports = {
                 })
                 throw new Error(error)
             }
+            await deleteEnvironmentVariable("NETLIFY_API_TOKEN").catch((error) => {
+                console.log(error);
+                utils.status.show({
+                    title: "Failed to Delete Netlify API Token",
+                    summary: "❌ Error: We've Failed to Delete your NETLIFY_API_TOKEN environment variable",
+                    text: "See console for error",
+                })
+            })
+            await deleteEnvironmentVariable("NETLIFY_TEAM_SLUG").catch((error) => {
+                console.log(error);
+                utils.status.show({
+                    title: "Failed to Delete NETLIFY_TEAM_SLUG",
+                    summary: "❌ Error: We've Failed to Delete your NETLIFY_TEAM_SLUG environment variable",
+                    text: "See console for error",
+                })
+            })
         }
     }
 };
