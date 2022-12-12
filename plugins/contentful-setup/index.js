@@ -16,7 +16,11 @@ module.exports = {
             const space = await client.getSpace(CONTENTFUL_SPACE_ID)
             const environment = await space.getEnvironment(CONTENTFUL_ENVIRONMENT_ID)
             const response = await environment.getContentTypes()
-            return response.items
+            try {
+                return response.items
+            } catch (error) {
+                throw new Error(error)
+            }
         }
 
 
@@ -32,37 +36,35 @@ module.exports = {
 
         try {
             const items = await getContentfulItems();
-            console.log(`You currently have ${items.length} content types in your space`);
-            // const items = response.items;
-            //         console.log(`We've detected ${items.length} content types in your space - We've skipped adding dummy content`);
-            //         if (items.length >= 4) {
-            //             utils.status.show({
-            //                 title: "Initial Import Skipped",
-            //                 summary: "✅ Content Detected",
-            //                 text: "We found content in your space, so we skipped adding dummy content",
-            //             }
-            //             )
-            //         } else {
-            //             try {
-            //                 await spaceImport({
-            //                     spaceId: CONTENTFUL_SPACE_ID,
-            //                     managementToken: CONTENTFUL_MANAGEMENT_TOKEN,
-            //                     content: exportFile,
-            //                 })
-            //                 utils.status.show({
-            //                     title: "Content Loadeded Successfully",
-            //                     summary: "✅ Success: We've Loaded in your Pre-Built Content",
-            //                     text: "You're all set!",
-            //                 })
-            //             } catch (error) {
-            //                 utils.status.show({
-            //                     title: "Content Load Failed",
-            //                     summary: "❌ Error: We've Failed to Load in your Pre-Built Content",
-            //                     text: "Please try again later",
-            //                 })
-            //                 throw new Error(error)
-            //             }
-            //         }
+            console.log(`We've detected ${items.length} content types in your space - We've skipped adding dummy content`);
+            if (items.length >= 4) {
+                utils.status.show({
+                    title: "Initial Import Skipped",
+                    summary: "✅ Content Detected",
+                    text: "We found content in your space, so we skipped adding dummy content",
+                }
+                )
+            } else {
+                try {
+                    await spaceImport({
+                        spaceId: CONTENTFUL_SPACE_ID,
+                        managementToken: CONTENTFUL_MANAGEMENT_TOKEN,
+                        content: exportFile,
+                    })
+                    utils.status.show({
+                        title: "Content Loadeded Successfully",
+                        summary: "✅ Success: We've Loaded in your Pre-Built Content",
+                        text: "You're all set!",
+                    })
+                } catch (error) {
+                    utils.status.show({
+                        title: "Content Load Failed",
+                        summary: "❌ Error: We've Failed to Load in your Pre-Built Content",
+                        text: "Please try again later",
+                    })
+                    throw new Error(error)
+                }
+            }
         } catch (error) {
             utils.status.show({
                 title: "Contentful Failed to Load",
