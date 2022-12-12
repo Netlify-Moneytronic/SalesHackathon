@@ -71,6 +71,12 @@ module.exports = {
                     text: "See console for error",
                 })
             })
+        } else {
+            utils.status.show({
+                title: "No Content to Load",
+                summary: "✅ Content Detected",
+                text: "We detected that you already have content in your space so we didn't load any content"
+            })
         }
     }
 };
