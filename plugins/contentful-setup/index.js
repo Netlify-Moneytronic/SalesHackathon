@@ -27,7 +27,8 @@ module.exports = {
             client.getSpace(CONTENTFUL_SPACE_ID)
                 .then((space) => space.getEnvironment(CONTENTFUL_ENVIRONMENT_ID))
                 .then((environment) => environment.getContentTypes())
-                .then((response) => {//0
+                .then((response) => {
+                    console.log(response);
                     const items = response.items;
                     console.log(items);
                     if (items.length === 4) {
