@@ -12,10 +12,12 @@ module.exports = {
             accessToken: CONTENTFUL_MANAGEMENT_TOKEN
         })
 
-        const contentfulItems = await client.getSpace(CONTENTFUL_SPACE_ID)
-            .then((space) => space.getEnvironment(CONTENTFUL_ENVIRONMENT_ID))
-            .then((environment) => environment.getContentTypes())
-            .then((response) => console.log(response.items)).catch(console.Error)
+        const getContentfulItems = async () => {
+            const space = await client.getSpace(CONTENTFUL_SPACE_ID)
+            const environment = await space.getEnvironment(CONTENTFUL_ENVIRONMENT_ID)
+            const response = await environment.getContentTypes()
+            return response.items
+        }
 
 
         if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_MANAGEMENT_TOKEN || !CONTENTFUL_ENVIRONMENT_ID) {
