@@ -7,22 +7,21 @@ const { CONTENTFUL_SPACE_ID, CONTENTFUL_MANAGEMENT_TOKEN, NETLIFY_API_TOKEN, NET
 module.exports = {
     onPreBuild: async ({ utils, constants }) => {
 
+        const apiToken = NETLIFY_API_TOKEN;
+        const teamSlug = NETLIFY_TEAM_SLUG;
+
         async function deleteEnvironmentVariable(envVar) {
-            const url = `https://api.netlify.com/api/v1/accounts/${NETLIFY_TEAM_SLUG}/env/${envVar}?site_id=${constants.SITE_ID}`
-            console.log(url);
+            const url = `https://api.netlify.com/api/v1/accounts/${teamSlug}/env/${envVar}?site_id=${constants.SITE_ID}`;
             return fetch(
                 url,
                 {
                     method: 'DELETE',
                     headers: {
                         'Content-Type': 'application/json',
-                        Authorization: `Bearer ${NETLIFY_API_TOKEN}`,
+                        Authorization: `Bearer ${apiToken}`,
                     }
                 }
-            ).then((response) => {
-                console.log(response);
-                return response;
-            })
+            )
         }
 
         if (NETLIFY_API_TOKEN && NETLIFY_TEAM_SLUG) {
@@ -48,7 +47,7 @@ module.exports = {
                     summary: "✅ Success: We've Loaded in your Pre-Built Content",
                     text: "You're all set!",
                 })
-                await deleteEnvironmentVariable(NETLIFY_API_TOKEN).catch((error) => {
+                await deleteEnvironmentVariable("NETLIFY_API_TOKEN").catch((error) => {
                     console.log(error);
                     utils.status.show({
                         title: "Failed to Delete Netlify API Token",
@@ -56,7 +55,7 @@ module.exports = {
                         text: "See console for error",
                     })
                 })
-                await deleteEnvironmentVariable(NETLIFY_TEAM_SLUG).catch((error) => {
+                await deleteEnvironmentVariable("NETLIFY_TEAM_SLUG").catch((error) => {
                     console.log(error);
                     utils.status.show({
                         title: "Failed to Delete NETLIFY_TEAM_SLUG",
