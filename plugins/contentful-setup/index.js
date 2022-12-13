@@ -26,11 +26,9 @@ module.exports = {
 
         const checkForContent = (items) => {
             const contentModel = ["company", "personal", "profile", 'experience']
-            const contentModelIds = contentModel.map(item => item.sys.id)
-            console.log(`contentModelIds: ${contentModelIds}`);
             const itemsIds = items.map(item => item.sys.id)
             console.log(`itemsIds: ${itemsIds}`);
-            const result = contentModelIds.every(item => itemsIds.includes(item))
+            const result = checkForContent.every(item => itemsIds.includes(item))
             console.log(`result: ${result}`);
             return result ? true : false
         }
@@ -47,10 +45,6 @@ module.exports = {
 
         try {
             const items = await getContentfulItems();
-            // wrte a function that determines if all of the items in an contentModel array exist in items array
-
-
-
             if (checkForContent(items)) {
                 console.log(`We've detected ${items.length} content types in your space - We've skipped adding dummy content`);
                 // For each item console log the id and the position in the array
