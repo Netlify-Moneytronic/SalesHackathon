@@ -13,7 +13,7 @@ module.exports = {
         })
 
         const getContentfulItems = async () => {
-            console.log(`Your environment variables are: ${CONTENTFUL_SPACE}, ${CONTENTFUL_MANAGEMENT_TOKEN}, ${CONTENTFUL_ENVIRONMENT_ID}`);
+            console.log(`Your environment variables are: ${CONTENTFUL_SPACE_ID}, ${CONTENTFUL_MANAGEMENT_TOKEN}, ${CONTENTFUL_ENVIRONMENT_ID}`);
             const space = await client.getSpace(CONTENTFUL_SPACE_ID)
             const environment = await space.getEnvironment(CONTENTFUL_ENVIRONMENT_ID)
             const response = await environment.getContentTypes()
