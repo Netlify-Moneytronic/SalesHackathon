@@ -27,8 +27,7 @@ module.exports = {
         const checkForContent = (items) => {
             const contentModel = ["company", "personal", "profile", 'experience']
             const itemsIds = items.map(item => item.sys.id)
-            console.log(`itemsIds: ${itemsIds}`);
-            const result = checkForContent.every(item => itemsIds.includes(item))
+            const result = contentModel.every(item => itemsIds.includes(item))
             console.log(`result: ${result}`);
             return result ? true : false
         }
