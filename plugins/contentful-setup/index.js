@@ -36,8 +36,12 @@ module.exports = {
 
         try {
             const items = await getContentfulItems();
-            console.log(`We've detected ${items.length} content types in your space - We've skipped adding dummy content`);
             if (items.length >= 4) {
+                console.log(`We've detected ${items.length} content types in your space - We've skipped adding dummy content`);
+                // For each item console log the id and the position in the array
+                items.forEach((item, index) => {
+                    console.log(`${index + 1}: ${item.id}`)
+                })
                 utils.status.show({
                     title: "Initial Import Skipped",
                     summary: "✅ Content Detected",
@@ -46,6 +50,7 @@ module.exports = {
                 )
             } else {
                 try {
+                    console.log(`We've detected no content in your space - We're loading in the dummy content`);
                     await spaceImport({
                         spaceId: CONTENTFUL_SPACE_ID,
                         managementToken: CONTENTFUL_MANAGEMENT_TOKEN,
