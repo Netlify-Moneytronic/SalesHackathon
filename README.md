@@ -1,21 +1,33 @@
-## Netlifu
+## Netlify Sales Hackathon 2023
+
+This is the repository from where you will begin the Sales Hackathon Project.
+
+Have Fun!!
+
+## View the demo site
+[Click here to explore the demo site that uses this repository as its source code.](https://andrea-next-contentful-demo.netlify.app/)
+
+## Getting set up
 
 Login or Signup to [Netlify](https://app.netlify.com)
 You will need a Netlify account to complete this project. 
-- [ ] unchecked Netlify account created? 
+- [ ] Netlify account created? 
+
 ## Github
 
 Login or Signup to [Github](https://github.com/signup?source=login)
 You will need a GitHub account to complete this project. 
 - [ ] Github account created? 
+
 ## Setup Contentful
 
 Login or Signup to [Contentful](https://www.contentful.com/sign-up/) 
 You will need a Github account to complete this project. 
-- [ ] unchecked Contentful account created?
+- [ ] Contentful account created?
 
-
+## Note!!!
 In order to save time, your work will be entirely done in your github repo and the Netlify UI. 
+
 ## One-click Deploy with Netlify (recommended)
 
 Please click on the Depoly to Netlify button below. This will clone your repo to your github repository, as well as deploy your application to your Netlify instance. 
