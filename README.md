@@ -57,25 +57,3 @@ After you deploy the site to Netlify you can configure it to build whenever new 
 Copy the generated URL and navigate to Settings > Webhooks in your Contentful space. Under Webhook Templates click Add next to the Netlify template. Add the URL you just copied and click Create webhook.
 
 ![A screenshot of adding a build hook in the Contentful UI](screenshot_configure_build_hook.png)
-## Configure Next.js preview mode
-
-In your Contentful space, go to Settings > Content preview and add a new content preview. Under content preview URLs check Blog Post and add this URL
-
-```text
-https://$NETLIFY_URL/api/preview?secret=$SECRET&slug={entry.fields.slug}&contentType=blogPost
-```
-
-Replacing `$NETLIFY` with the URL of your site deployed on Netlify and `$SECRET` which a secret value that you generate. Store this value as you will add to your Netlify environment variables in a moment.
-
-Check Page Content and add this URL
-
-```text
-https://$NETLIFY_URL/api/preview?secret=$SECRET&slug={entry.fields.slug}&contentType=pageContent
-```
-
-Replacing the variables with the same values you used above. Navigate to your site on Netlify and go to Site settings > Build & Deploy > Environment and add the following environment variables
-
-```text
-CONTENTFUL_PREVIEW_SECRET
-NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN
-```
