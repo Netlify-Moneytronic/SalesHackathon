@@ -40,7 +40,7 @@ module.exports = {
                 console.log(`We've detected ${items.length} content types in your space - We've skipped adding dummy content`);
                 // For each item console log the id and the position in the array
                 items.forEach((item, index) => {
-                    console.log(`${index + 1}: ${item.id}`)
+                    console.log(`${index + 1}: ${item.sys.id}`)
                 })
                 utils.status.show({
                     title: "Initial Import Skipped",
