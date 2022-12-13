@@ -48,8 +48,7 @@ module.exports = {
                 try {
                     console.log(`We've detected no content in your space - We're loading in the dummy content`);
                     await spaceImport({
-                        //Break import step
-                        spaceId: "?",
+                        spaceId: "CONTENTFUL_SPACE_ID",
                         managementToken: CONTENTFUL_MANAGEMENT_TOKEN,
                         content: exportFile,
                     })
