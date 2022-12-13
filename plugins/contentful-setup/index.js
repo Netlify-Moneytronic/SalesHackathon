@@ -17,8 +17,7 @@ module.exports = {
             const environment = await space.getEnvironment(CONTENTFUL_ENVIRONMENT_ID)
             const response = await environment.getContentTypes()
             try {
-                //Trigger ertor if no items are returned
-                return response.itemz
+                return response.item
             } catch (error) {
                 throw new Error(error)
             }
@@ -49,7 +48,8 @@ module.exports = {
                 try {
                     console.log(`We've detected no content in your space - We're loading in the dummy content`);
                     await spaceImport({
-                        spaceId: CONTENTFUL_SPACE_ID,
+                        //Break import step
+                        spaceId: "?",
                         managementToken: CONTENTFUL_MANAGEMENT_TOKEN,
                         content: exportFile,
                     })
