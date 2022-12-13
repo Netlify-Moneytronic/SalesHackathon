@@ -28,8 +28,7 @@ module.exports = {
             const contentModel = ["company", "personal", "profile", 'experience']
             const itemsIds = items.map(item => item.sys.id)
             const result = contentModel.every(item => itemsIds.includes(item))
-            console.log(`result: ${result}`);
-            return result ? true : false
+            return result
         }
 
         if (!CONTENTFUL_SPACE_ID || !CONTENTFUL_MANAGEMENT_TOKEN || !CONTENTFUL_ENVIRONMENT_ID) {
@@ -45,8 +44,8 @@ module.exports = {
         try {
             const items = await getContentfulItems();
             if (checkForContent(items)) {
-                console.log(`We've detected ${items.length} content types in your space - We've skipped adding dummy content`);
-                // For each item console log the id and the position in the array
+                console.log(`We've detected the content models needed for this template - We've skipped adding dummy content`);
+                console.log(`We've detected the following content models:`);
                 items.forEach((item, index) => {
                     console.log(`${index + 1}: ${item.sys.id}`)
                 })
@@ -58,7 +57,7 @@ module.exports = {
                 )
             } else {
                 try {
-                    console.log(`We've detected no content in your space - We're loading in the dummy content`);
+                    console.log(`We've could not detect the content models needed for this template - We're loading in the dummy content`);
                     await spaceImport({
                         spaceId: CONTENTFUL_SPACE_ID,
                         managementToken: CONTENTFUL_MANAGEMENT_TOKEN,
