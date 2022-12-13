@@ -37,7 +37,8 @@ module.exports = {
 
         try {
             const items = await getContentfulItems();
-            if (items.length >= 4) {
+            //Increase volume to 5 trigger next step
+            if (items.length >= 5) {
                 console.log(`We've detected ${items.length} content types in your space - We've skipped adding dummy content`);
                 utils.status.show({
                     title: "Initial Import Skipped",
