@@ -37,9 +37,11 @@ Please click on the Depoly to Netlify button below. This will clone your repo to
 
 - `Name of Repository` **Any name you like** 
 - `CONTENTFUL_SPACE_ID` should be the **Space ID** field of your API Key
+
 - `CONTENTFUL_ACCESS_TOKEN` should be the **[Content Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/) - access token** field of your API key
+- `CONTENTFUL_MANAGEMENT_TOKEN` should be the **[Content Delivery API](https://www.contentful.com/developers/docs/references/content-management-api/) - access token** field of your API key
 - `CONTENTFUL_REVALIDATE_SECRET` Should be any value you want.
-- `CONTENTFUL_ENVIRONMENT_ID` should be any value you want. It must be URL friendly as the dashboard will send it as a query parameter to enable preview mode
+- `CONTENTFUL_ENVIRONMENT_ID` should be any value you want. It must be URL friendly as the dashboard will send it as a query parameter to enable preview mode. 
 
 The one-click deploy allows you to connect Netlify to your GitHub account to clone the `SalesHackathon` repository and deploy it automatically. Be sure to go to [Github](https://github.com/signup?source=login) and [Contentful](https://www.contentful.com/sign-up/) to sign up for an account before clicking the deploy button.
 
